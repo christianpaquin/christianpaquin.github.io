@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World"
-date:   2023-03-15 10:23:20 -0500
+permalink: /:year-:month-:day-:title.html
 ---
 
 Hello World!
