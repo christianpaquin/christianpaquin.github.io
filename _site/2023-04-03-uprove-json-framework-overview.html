@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-04-03T16:07:42-04:00</updated><id>/feed.xml</id><title type="html">Christian’s Corner</title><subtitle>Sharing some information about my work at Microsoft Research on cryptography, identity, and security.</subtitle><entry><title type="html">U-Prove JSON Framework Overview</title><link href="/2023-04-03-uprove-json-framework-overview.html" rel="alternate" type="text/html" title="U-Prove JSON Framework Overview" /><published>2023-04-03T00:00:00-04:00</published><updated>2023-04-03T00:00:00-04:00</updated><id>/uprove-json-framework-overview</id><content type="html" xml:base="/2023-04-03-uprove-json-framework-overview.html"><![CDATA[<p>In this post, I’ll give an overview of the recently released <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove_JSON_Framework.md">U-Prove JSON Framework (UPJF)</a>, which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>U-Prove JSON Framework Overview | Christian’s Corner</title>
+<meta name="generator" content="Jekyll v3.8.6">
+<meta property="og:title" content="U-Prove JSON Framework Overview">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.">
+<meta property="og:description" content="In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.">
+<link rel="canonical" href="/2023-04-03-uprove-json-framework-overview.html">
+<meta property="og:url" content="/2023-04-03-uprove-json-framework-overview.html">
+<meta property="og:site_name" content="Christian’s Corner">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-04-03T00:00:00-04:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="U-Prove JSON Framework Overview">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-03T00:00:00-04:00","datePublished":"2023-04-03T00:00:00-04:00","description":"In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.","headline":"U-Prove JSON Framework Overview","mainEntityOfPage":{"@type":"WebPage","@id":"/2023-04-03-uprove-json-framework-overview.html"},"url":"/2023-04-03-uprove-json-framework-overview.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Christian's Corner">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Christian's Corner</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">U-Prove JSON Framework Overview</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-04-03T00:00:00-04:00" itemprop="datePublished">Apr 3, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In this post, I’ll give an overview of the recently released <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove_JSON_Framework.md">U-Prove JSON Framework (UPJF)</a>, which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.</p>
 
 <h1 id="u-prove-technology-overview">U-Prove Technology Overview</h1>
 
@@ -34,7 +91,8 @@
   <li>The key type <code class="highlighter-rouge">kty</code> is always set to “UP” for U-Prove.</li>
   <li>The curve and generators are identified by the <code class="highlighter-rouge">alg</code> identifier, which could be either “UP256”, “UP384”, or “UP521” (corresponding to the NIST P-256, P-384, and P-521, respectively, and the matching <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove%20Recommended%20Parameters%20Profile%20V1.1%20Revision%203.pdf">pre-calculated generators</a>).</li>
   <li>The key identifier <code class="highlighter-rouge">kid</code> corresponds to the issuer parameters UID which needs to be unique for the application realm. Developers can simply let the library generate these as the hash digest of the other fields.</li>
-  <li><code class="highlighter-rouge">g0</code> is the issuer public key.</li>
+  <li>
+<code class="highlighter-rouge">g0</code> is the issuer public key.</li>
   <li>The specification <code class="highlighter-rouge">spec</code> is a base64 encoding of a JSON object describing the content of to-be-issued tokens. Here, the value is:</li>
 </ul>
 
@@ -54,7 +112,7 @@
 <p>U-Prove tokens have the following structure:</p>
 
 <div align="center">
-  <img src="img/uprovetoken.png" alt="U-Prove token" width="50%" /><br /><br />
+  <img src="img/uprovetoken.png" alt="U-Prove token" width="50%"><br><br>
 </div>
 
 <ul>
@@ -70,7 +128,7 @@
 <p>The U-Prove issuance protocol is a 4-leg request-commitment-challenge-response exchange, initiated by the user. How the issuer authenticates the user and validates the attributes to issue is application specific. Multiple tokens encoding the same attributes can be obtained in batch.</p>
 
 <div align="center" style="width: 60%;">
-<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBVc2VyXG5wYXJ0aWNpcGFudCBJc3N1ZXJcblVzZXItPj5Jc3N1ZXI6IHRva2VuIGlzc3VhbmNlIHJlcXVlc3Rcbklzc3Vlci0-PlVzZXI6IGZpcnN0IGlzc3VhbmNlIG1lc3NhZ2VcblVzZXItPj5Jc3N1ZXI6IHNlY29uZCBpc3N1YW5jZSBtZXNzYWdlXG5Jc3N1ZXItPj5Vc2VyOiB0aGlyZCBpc3N1YW5jZSBtZXNzYWdlXG5Vc2VyLT4-VXNlcjogZ2VuZXJhdGUgdG9rZW5zIiwibWVybWFpZCI6bnVsbH0" />
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBVc2VyXG5wYXJ0aWNpcGFudCBJc3N1ZXJcblVzZXItPj5Jc3N1ZXI6IHRva2VuIGlzc3VhbmNlIHJlcXVlc3Rcbklzc3Vlci0-PlVzZXI6IGZpcnN0IGlzc3VhbmNlIG1lc3NhZ2VcblVzZXItPj5Jc3N1ZXI6IHNlY29uZCBpc3N1YW5jZSBtZXNzYWdlXG5Jc3N1ZXItPj5Vc2VyOiB0aGlyZCBpc3N1YW5jZSBtZXNzYWdlXG5Vc2VyLT4-VXNlcjogZ2VuZXJhdGUgdG9rZW5zIiwibWVybWFpZCI6bnVsbH0">
 </div>
 
 <p>The initial token issuance request might contain user-suggested parameters, for example, the desired number of tokens and attribute values; ultimately, the issuer decides on these values.</p>
@@ -173,83 +231,54 @@
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>The issuance protocol uses a technique called <a href="http://www.credentica.com/mit/Chapter4.pdf">restrictive blinding</a>, which is a generalization of blind signatures allowing them to be applied on messages known to the issuer. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>The issuance protocol uses a technique called <a href="http://www.credentica.com/mit/Chapter4.pdf">restrictive blinding</a>, which is a generalization of blind signatures allowing them to be applied on messages known to the issuer. <a href="#fnref:1" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:2">
-      <p>The <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove%20Cryptographic%20Specification%20V1.1%20Revision%205.pdf">cryptographic specification</a> (and the <a href="https://github.com/microsoft/uprove-csharp-sdk">C# SDK</a>) support more features (including device-binding, domain/scope pseudonym generation, attribute commitments), and the <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/U-Prove20extensions20paper.pdf">extensions</a> support an even broader set of features to build more advanced credential systems (for example, proving attribute equality and non-equality, range proofs, revocation). <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>The <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove%20Cryptographic%20Specification%20V1.1%20Revision%205.pdf">cryptographic specification</a> (and the <a href="https://github.com/microsoft/uprove-csharp-sdk">C# SDK</a>) support more features (including device-binding, domain/scope pseudonym generation, attribute commitments), and the <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/U-Prove20extensions20paper.pdf">extensions</a> support an even broader set of features to build more advanced credential systems (for example, proving attribute equality and non-equality, range proofs, revocation). <a href="#fnref:2" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:3">
-      <p>A malicious issuer could try to “tag” a target user by using different issuer parameters, or by encoding attributes differently or in a different order. Auditing/transparency systems can help with the former, and specifying the token’s content in the issuer parameters helps with the latter. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>A malicious issuer could try to “tag” a target user by using different issuer parameters, or by encoding attributes differently or in a different order. Auditing/transparency systems can help with the former, and specifying the token’s content in the issuer parameters helps with the latter. <a href="#fnref:3" class="reversefootnote">↩</a></p>
     </li>
     <li id="fn:4">
-      <p>The verifier identifier prevents the proof from being replayed to a different verifier, the nonce prevents replays in general, and the timestamp limits how long nonces should be remembered by the verifier. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>The verifier identifier prevents the proof from being replayed to a different verifier, the nonce prevents replays in general, and the timestamp limits how long nonces should be remembered by the verifier. <a href="#fnref:4" class="reversefootnote">↩</a></p>
     </li>
   </ol>
-</div>]]></content><author><name></name></author><summary type="html"><![CDATA[In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.]]></summary></entry><entry><title type="html">Auth all the things!?! Identity technologies to prevent a privacy decline</title><link href="/2023-03-22-auth-all-the-things.html" rel="alternate" type="text/html" title="Auth all the things!?! Identity technologies to prevent a privacy decline" /><published>2023-03-22T00:00:00-04:00</published><updated>2023-03-22T00:00:00-04:00</updated><id>/auth-all-the-things</id><content type="html" xml:base="/2023-03-22-auth-all-the-things.html"><![CDATA[<blockquote>
-"AI is the path of the dark bots. AI leads to fake, fake leads to auth, auth leads to surveilling."  --Yoda
-</blockquote>
-
-<p>The advances in generative AI technologies have been nothing short of remarkable. From language processing to image and video synthesis, these technologies are opening new possibilities that not too long ago felt like science fiction. However, with this innovation comes a significant challenge: how to counter malicious use of AI by threat actors. As the technology becomes better and widely available, the quantity and quality of spear phishing, deep fakes, misinformation and other malicious activities increases. It is already nearly impossible to distinguish between humans and AI generated content. The renowned New Yorker <a href="https://en.wikipedia.org/wiki/On_the_Internet,_nobody_knows_you%27re_a_dog">internet dog</a>  cartoon could use an update: “On the internet, nobody knows you are an AI-powered dog”.</p>
-
-<div align="center">
-  <img src="img/ai-powered-dog.jpg" alt="An AI-powered dog, generated by the Bing Image Creator" width="40%" /><br /><br />
 </div>
 
-<p>It is safe to assume that this situation will lead to a push for increased authentication across our online experiences, to verify the authenticity, integrity, and origin of content, and to verify the humanness of participants. The cryptographic toolbox is full of techniques to help with this, but continuous and inescapable personal and content authentication using conventional schemes would leave a digital wake leading to an unprecedented decrease in privacy, while facilitating generalized and automated surveillance. This is not how we interact in real life, and this is not how we have learned and are expecting to interact online, especially given recent privacy and data minimization trends in legislation and many services by industry; no one wants to live in a panopticon.</p>
+  </div>
+<a class="u-url" href="/2023-04-03-uprove-json-framework-overview.html" hidden></a>
+</article>
 
-<div align="center">
-  <img src="img/auth_all_the_things.png" alt="AUTH ALL THE THINGS!" title="Original: http://hyperboleandahalf.blogspot.com/2010/06/this-is-why-ill-never-be-adult.html" width="40%" /><br />
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Christian's Corner</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Christian's Corner</li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/christianpaquin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">christianpaquin</span></a></li>
+<li><a href="https://www.twitter.com/chpaquin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">chpaquin</span></a></li>
+</ul>
 </div>
 
-<h2 id="privacy-enhancing-identity-technologies">Privacy-enhancing identity technologies</h2>
+      <div class="footer-col footer-col-3">
+        <p>Sharing some information about my work at Microsoft Research on cryptography, identity, and security.</p>
+      </div>
+    </div>
 
-<p>Thankfully, we are making good progress in developing privacy-enhancing technologies that could help balance security and privacy in user and data authentication systems. We have been developing such technologies at MSR for a long time, and many are reaching a maturity level that makes them ready for standardization and wide adoption.</p>
+  </div>
 
-<h3 id="selective-disclosure-of-attributes">Selective disclosure of attributes</h3>
+</footer>
+</body>
 
-<p>One important property in privacy-preserving identity systems is minimization of the data presented in a particular interaction. Identity credentials typically contain multiple attributes (a.k.a. claims), and we don’t necessarily need to disclose all of them in every presentation. This is not really a problem when presenting our paper credentials offline: the person checking my ID at the bar to see if I’m allowed to drink doesn’t have a photographic memory and won’t remember my address, but presenting an equivalent credential online could easily result in data misuse even for well-intended recipients.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> Federated protocols (such as SAML and OpenID/OAuth) aim to minimize the disclosed information by requesting only the required attributes on demand from an issuer, but this reduces the user’s autonomy and privacy vis-a-vis the issuer (while also increasing the load on the issuer’s system). There are cryptographic mechanisms to selectively present a subset of certified attributes encoded in a long-lived token, while preserving the integrity of the issuer’s signature. One hashed-based mechanism has notably made its way in the <a href="https://www.iso.org/standard/69084.html">mobile Driver License ISO standard</a>. The technique is also being standardized for JSON Web Tokens (JWT) (the most popular ID token format today) in the OAuth <a href="https://github.com/oauth-wg/oauth-selective-disclosure-jwt">Selective-Disclosure JWT</a> working group; you can experiment with the concept with my <a href="https://github.com/christianpaquin/sd-jwt">TypeScript library</a> implementation.</p>
-
-<h3 id="unlinkability">Unlinkability</h3>
-
-<p>Another important and perhaps more subtle property is the unlinkability between the issuance and presentation of the credentials, to prevent undesired tracking of the users activities. Conventional signatures create unique identifiers that can be used as correlation handles to link user activities. There are two mechanisms to break this bond: you can randomize either the issuance or the presentation of the credential using special cryptographic schemes.</p>
-
-<p>One of the most promising signature schemes for randomizing presentations is Boneh-Boyen-Shacham (BBS). We are developing the specification in the Decentralized Identity Foundation <a href="https://github.com/decentralized-identity/bbs-signature">BBS signatures</a> working group. We at MSR have a <a href="https://github.com/microsoft/bbs-node-reference/">TypeScript Node</a> implementation of the algorithm that has just been updated to implement the 2nd draft submitted to the IETF. I’m excited by future improvements to the current specification following the results of this <a href="https://eprint.iacr.org/2023/275">EuroCrypt paper</a> by University of Washington’s Stefano Tessaro and Chenzhi Zhu, who analyzed the specification and proposed some optimizations.</p>
-
-<p>Techniques for randomizing credentials at issuance include so-called blind signatures. These also made their way to standardized protocols, for example in <a href="https://github.com/ietf-wg-privacypass">privacy pass</a> allowing the issuance of anonymous tokens redeemable to avoid answering CAPTCHAs.</p>
-
-<h3 id="new-u-prove-release">New U-Prove release</h3>
-
-<p>One pioneering technology that we developed at MSR is <a href="https://microsoft.com/uprove">U-Prove</a>, which has a long academic history and has been prototyped and piloted in various systems. U-Prove provides both unlinkability of signatures and selective disclosure of attributes,<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> and unlike some more recent cryptographic schemes, it uses simple, easy-to-implement mathematical building blocks, which provides high performance.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
-
-<div align="center">
-  <img src="img/uprove.jpg" alt="U-Prove logo" width="30%" /><br /><br />
-</div>
-
-<p>I’m happy to announce the release of a new <a href="https://github.com/microsoft/uprove-node-reference">U-Prove Typescript library</a> and a new <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove_JSON_Framework.md">JSON framework</a>, which makes it easier to integrate the technology in web applications. The framework can be used directly to realize various privacy-preserving scenarios, or be integrated in higher-level frameworks such as <a href="https://github.com/json-web-proofs/json-web-proofs">JSON Web Proofs (JWP)</a> and <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials (VC)</a>. I’ll cover the U-Prove features and interesting use cases in future posts.</p>
-
-<h2 id="parting-thoughts">Parting thoughts</h2>
-
-<p>I’m very excited by the promises of the novel AI systems, and I’m optimistic that these emerging cryptographic tools will help balance security and privacy in face of these upcoming AI misuses. Now let’s get to work and start building…</p>
-
-<p><small>
-<em>AI tools were used to draft part of this text. No AI was harmed in the making of this post, at least not to my knowledge.</em>
-</small></p>
-
-<h2 id="footnotes">Footnotes</h2>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>The data could be hacked, leaked, stored forever in databases and logs, sold to 3rd parties. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>U-Prove supports more powerful disclosure techniques, such a proving a <em>property</em> of an attribute instead of disclosing it (e.g., proving that my name isn’t listed in a revocation list, or that I’m over-21 without disclosing my date of birth). See the <a href="https://www.microsoft.com/en-us/research/publication/u-prove-extensions/">U-Prove extensions</a> paper for details. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>U-Prove uses standard elliptic curves, by default the NIST prime curves used in ECDSA. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><summary type="html"><![CDATA["AI is the path of the dark bots. AI leads to fake, fake leads to auth, auth leads to surveilling." --Yoda]]></summary></entry><entry><title type="html">Hello World</title><link href="/2023-03-15-hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2023-03-15T00:00:00-04:00</published><updated>2023-03-15T00:00:00-04:00</updated><id>/hello-world</id><content type="html" xml:base="/2023-03-15-hello-world.html"><![CDATA[<p>Hello World!</p>
-
-<p>To echo the words from the <a href="/about/">about</a> page:
-I’m cryptography engineer at Microsoft Research (my <a href="https://www.microsoft.com/en-us/research/people/cpaquin/">MSR page</a>) where I aim to bring new research innovations closer to reality. I’ll be using this space to share news and insights about my work on identity, security, and cryptography.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Hello World!]]></summary></entry></feed>
+</html>
