@@ -1,47 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>U-Prove JSON Framework Overview | Christian’s Corner</title>
-<meta name="generator" content="Jekyll v3.8.6">
-<meta property="og:title" content="U-Prove JSON Framework Overview">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.">
-<meta property="og:description" content="In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.">
-<link rel="canonical" href="/2023-04-03-uprove-json-framework-overview.html">
-<meta property="og:url" content="/2023-04-03-uprove-json-framework-overview.html">
-<meta property="og:site_name" content="Christian’s Corner">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2023-04-03T00:00:00-04:00">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="U-Prove JSON Framework Overview">
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="U-Prove JSON Framework Overview" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications." />
+<meta property="og:description" content="In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications." />
+<link rel="canonical" href="http://localhost:4000/2023-04-03-uprove-json-framework-overview.html" />
+<meta property="og:url" content="http://localhost:4000/2023-04-03-uprove-json-framework-overview.html" />
+<meta property="og:site_name" content="Christian’s Corner" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-03T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="U-Prove JSON Framework Overview" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-03T00:00:00-04:00","datePublished":"2023-04-03T00:00:00-04:00","description":"In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.","headline":"U-Prove JSON Framework Overview","mainEntityOfPage":{"@type":"WebPage","@id":"/2023-04-03-uprove-json-framework-overview.html"},"url":"/2023-04-03-uprove-json-framework-overview.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-03T00:00:00-04:00","datePublished":"2023-04-03T00:00:00-04:00","description":"In this post, I’ll give an overview of the recently released U-Prove JSON Framework (UPJF), which defines how to use JSON to encode U-Prove artifacts, allowing developers to easily integrate the privacy-protecting cryptographic technology into web applications.","headline":"U-Prove JSON Framework Overview","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2023-04-03-uprove-json-framework-overview.html"},"url":"http://localhost:4000/2023-04-03-uprove-json-framework-overview.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
-<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Christian's Corner">
-</head>
-<body>
-<header class="site-header" role="banner">
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Christian's Corner" /></head>
+<body><header class="site-header" role="banner">
 
-  <div class="wrapper">
-<a class="site-title" rel="author" href="/">Christian's Corner</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Christian&#39;s Corner</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewbox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
             </svg>
           </span>
         </label>
 
         <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav>
-</div>
+      </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -91,8 +83,7 @@
   <li>The key type <code class="highlighter-rouge">kty</code> is always set to “UP” for U-Prove.</li>
   <li>The curve and generators are identified by the <code class="highlighter-rouge">alg</code> identifier, which could be either “UP256”, “UP384”, or “UP521” (corresponding to the NIST P-256, P-384, and P-521, respectively, and the matching <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove%20Recommended%20Parameters%20Profile%20V1.1%20Revision%203.pdf">pre-calculated generators</a>).</li>
   <li>The key identifier <code class="highlighter-rouge">kid</code> corresponds to the issuer parameters UID which needs to be unique for the application realm. Developers can simply let the library generate these as the hash digest of the other fields.</li>
-  <li>
-<code class="highlighter-rouge">g0</code> is the issuer public key.</li>
+  <li><code class="highlighter-rouge">g0</code> is the issuer public key.</li>
   <li>The specification <code class="highlighter-rouge">spec</code> is a base64 encoding of a JSON object describing the content of to-be-issued tokens. Here, the value is:</li>
 </ul>
 
@@ -112,7 +103,7 @@
 <p>U-Prove tokens have the following structure:</p>
 
 <div align="center">
-  <img src="img/uprovetoken.png" alt="U-Prove token" width="50%"><br><br>
+  <img src="img/uprovetoken.png" alt="U-Prove token" width="50%" /><br /><br />
 </div>
 
 <ul>
@@ -127,8 +118,8 @@
 
 <p>The U-Prove issuance protocol is a 4-leg request-commitment-challenge-response exchange, initiated by the user. How the issuer authenticates the user and validates the attributes to issue is application specific. Multiple tokens encoding the same attributes can be obtained in batch.</p>
 
-<div align="center" style="width: 60%;">
-<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBVc2VyXG5wYXJ0aWNpcGFudCBJc3N1ZXJcblVzZXItPj5Jc3N1ZXI6IHRva2VuIGlzc3VhbmNlIHJlcXVlc3Rcbklzc3Vlci0-PlVzZXI6IGZpcnN0IGlzc3VhbmNlIG1lc3NhZ2VcblVzZXItPj5Jc3N1ZXI6IHNlY29uZCBpc3N1YW5jZSBtZXNzYWdlXG5Jc3N1ZXItPj5Vc2VyOiB0aGlyZCBpc3N1YW5jZSBtZXNzYWdlXG5Vc2VyLT4-VXNlcjogZ2VuZXJhdGUgdG9rZW5zIiwibWVybWFpZCI6bnVsbH0">
+<div align="center">
+  <img src="img/uprove-issuance.svg" alt="U-Prove issuance protocol" width="50%" /><br /><br />
 </div>
 
 <p>The initial token issuance request might contain user-suggested parameters, for example, the desired number of tokens and attribute values; ultimately, the issuer decides on these values.</p>
@@ -231,22 +222,21 @@
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>The issuance protocol uses a technique called <a href="http://www.credentica.com/mit/Chapter4.pdf">restrictive blinding</a>, which is a generalization of blind signatures allowing them to be applied on messages known to the issuer. <a href="#fnref:1" class="reversefootnote">↩</a></p>
+      <p>The issuance protocol uses a technique called <a href="http://www.credentica.com/mit/Chapter4.pdf">restrictive blinding</a>, which is a generalization of blind signatures allowing them to be applied on messages known to the issuer. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>The <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove%20Cryptographic%20Specification%20V1.1%20Revision%205.pdf">cryptographic specification</a> (and the <a href="https://github.com/microsoft/uprove-csharp-sdk">C# SDK</a>) support more features (including device-binding, domain/scope pseudonym generation, attribute commitments), and the <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/U-Prove20extensions20paper.pdf">extensions</a> support an even broader set of features to build more advanced credential systems (for example, proving attribute equality and non-equality, range proofs, revocation). <a href="#fnref:2" class="reversefootnote">↩</a></p>
+      <p>The <a href="https://github.com/microsoft/uprove-node-reference/blob/main/doc/U-Prove%20Cryptographic%20Specification%20V1.1%20Revision%205.pdf">cryptographic specification</a> (and the <a href="https://github.com/microsoft/uprove-csharp-sdk">C# SDK</a>) support more features (including device-binding, domain/scope pseudonym generation, attribute commitments), and the <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/U-Prove20extensions20paper.pdf">extensions</a> support an even broader set of features to build more advanced credential systems (for example, proving attribute equality and non-equality, range proofs, revocation). <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>A malicious issuer could try to “tag” a target user by using different issuer parameters, or by encoding attributes differently or in a different order. Auditing/transparency systems can help with the former, and specifying the token’s content in the issuer parameters helps with the latter. <a href="#fnref:3" class="reversefootnote">↩</a></p>
+      <p>A malicious issuer could try to “tag” a target user by using different issuer parameters, or by encoding attributes differently or in a different order. Auditing/transparency systems can help with the former, and specifying the token’s content in the issuer parameters helps with the latter. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
-      <p>The verifier identifier prevents the proof from being replayed to a different verifier, the nonce prevents replays in general, and the timestamp limits how long nonces should be remembered by the verifier. <a href="#fnref:4" class="reversefootnote">↩</a></p>
+      <p>The verifier identifier prevents the proof from being replayed to a different verifier, the nonce prevents replays in general, and the timestamp limits how long nonces should be remembered by the verifier. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
 
-  </div>
-<a class="u-url" href="/2023-04-03-uprove-json-framework-overview.html" hidden></a>
+  </div><a class="u-url" href="/2023-04-03-uprove-json-framework-overview.html" hidden></a>
 </article>
 
       </div>
@@ -255,20 +245,15 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Christian's Corner</h2>
+    <h2 class="footer-heading">Christian&#39;s Corner</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Christian's Corner</li>
-</ul>
+          <li class="p-name">Christian&#39;s Corner</li></ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-<ul class="social-media-list">
-<li><a href="https://github.com/christianpaquin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">christianpaquin</span></a></li>
-<li><a href="https://www.twitter.com/chpaquin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">chpaquin</span></a></li>
-</ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/christianpaquin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">christianpaquin</span></a></li><li><a href="https://www.twitter.com/chpaquin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">chpaquin</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
