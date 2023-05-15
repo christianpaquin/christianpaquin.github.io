@@ -31,6 +31,3 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
-
-# for mermaid support
-gem 'jekyll-spaceship', group: :jekyll_plugins

@@ -71,17 +71,8 @@ U-Prove tokens have the following structure:
 
 The U-Prove issuance protocol is a 4-leg request-commitment-challenge-response exchange, initiated by the user. How the issuer authenticates the user and validates the attributes to issue is application specific. Multiple tokens encoding the same attributes can be obtained in batch.
 
-<div align='center' style="width: 60%;">
-```mermaid!
-sequenceDiagram
-    participant User
-    participant Issuer
-    User->>Issuer: token issuance request
-    Issuer->>User: first issuance message
-    User->>Issuer: second issuance message
-    Issuer->>User: third issuance message
-    User->>User: generate tokens
-```
+<div align='center'>
+  <img src="img/uprove-issuance.svg" alt="U-Prove issuance protocol" width="50%"><br/><br/>
 </div>
 
 The initial token issuance request might contain user-suggested parameters, for example, the desired number of tokens and attribute values; ultimately, the issuer decides on these values.
