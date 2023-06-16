@@ -8,7 +8,7 @@ permalink: /:year-:month-:day-:title.html
   <img src="img/waldo.jpg" alt="Waldo" title="Waldo">
 </div>
 
-Let’s imagine an identity-themed game of Where’s Waldo. The goal is to figure out where Waldo used an identity document, say his driver’s license.[^1] The credential, issued by the DMV (which I'll also call the issuer), contains his name, his date of birth, and his address. Now let’s say that Waldo presents his credential at a casino to prove he is over 18.[^2]
+Let’s imagine an identity-themed game of [Where’s Waldo](https://waldo.candlewick.com/). The goal is to figure out where Waldo used an identity document, say his driver’s license.[^1] The credential, issued by the DMV (which I'll also call the issuer), contains his name, his date of birth, and his address. Now let’s say that Waldo presents his credential at a casino to prove he is over 18.[^2]
 
 Now, can the player – let’s call him Odlaw, Waldo’s infamous nemesis – figure out that Waldo visited this location after the fact? We assume Odlaw is very powerful, and has access to the DMV’s and the casino’s internal systems (e.g., logs, employees, etc.) Can he track the usage of Waldo’s identity document? 
 
