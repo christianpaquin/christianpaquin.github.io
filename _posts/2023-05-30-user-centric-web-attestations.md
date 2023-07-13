@@ -51,7 +51,7 @@ The browser extension can also generate and verify a UWA encoded as QR code, whi
   <img src="img/uwa_qr.png" alt="UWA QR code" width="20%"><br/>
 </div>
 
-This web attestation doesn't attest to much; it just shows that I was able to set up the sample issuer, obtain demo tokens, and create a UWA for my blog post. This, however, demonstrates the mechanics of issuing and presenting such attestations. The project's README page walks through a [deployment example](https://github.com/microsoft/web-attestation-sample#deployment-example) describing how Alice can obtain U-Prove tokens from the `https://commun.ity` website and attach a corresponding membership attestation to her `https://soc.ial/@pr1v4cy` social profile, and how another user attach a humanity attestation to their page.
+This web attestation doesn't attest to much; it just shows that I was able to set up the sample issuer, obtain demo tokens, and create a UWA for my blog post. This, however, demonstrates the mechanics of issuing and presenting such attestations. The project's README page walks through a [deployment example](https://github.com/microsoft/web-attestation-sample#deployment-example) describing how Alice can obtain U-Prove tokens from the `https://commun.ity` website and attach a corresponding membership attestation to her `https://soc.ial/@pr1v4cy` social profile, and how another user attach a humanity attestation to their page; see it in action in [this youtube video](https://www.youtube.com/watch?v=3jSd7qwCix4).
 
 # Concluding thoughts
 
