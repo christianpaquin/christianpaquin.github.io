@@ -21,6 +21,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chpaquin
 github_username:  christianpaquin
 future: true # show article with dates that are in the future
+include: [".well-known"]
 
 # Build settings
 markdown: kramdown

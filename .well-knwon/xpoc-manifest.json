@@ -1,0 +1,22 @@
+{
+    "name": "Christian Paquin",
+    "url": "https://christianpaquin.github.io/",
+    "content": [
+	{
+	    "idx": 1,
+	    "title": "XPOC test", 
+	    "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
+	    "platform": "youtube",
+	    "puid": "hDd3t7y1asU",
+	    "account": "@christianpaquinmsr"
+	},
+	{
+	    "idx": 2,
+	    "title": "Testing testing", 
+	    "url": "https://twitter.com/xpocvalidator/status/1691899986261221531",
+	    "platform": "X",
+	    "puid": "1691899986261221531",
+	    "account": "xpocvalidator"
+	}	
+    ]
+}
