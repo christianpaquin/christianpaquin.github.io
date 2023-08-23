@@ -4,13 +4,18 @@
     "accounts": [
         {
             "platform": "youtube",
-            "url": "https://www.youtube.com/@christianpaquinmsr",
+            "url": "https://www.youtube.com/@christianpaquinmsr/about",
             "account": "christianpaquinmsr"
         },
         {
             "platform": "x",
-            "url": "https://twitter.com/xpocvalidator",
-            "account": "xpocvalidator"
+            "url": "https://twitter.com/chpaquin",
+            "account": "chpaquin"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/christianpaquin",
+            "account": "christianpaquin"
         }
     ],
     "content": [
@@ -20,13 +25,6 @@
 	    "platform": "youtube",
 	    "puid": "hDd3t7y1asU",
 	    "account": "@christianpaquinmsr"
-	},
-	{
-	    "title": "Testing testing", 
-	    "url": "https://twitter.com/xpocvalidator/status/1691899986261221531",
-	    "platform": "x",
-	    "puid": "1691899986261221531",
-	    "account": "xpocvalidator"
 	}	
     ]
 }
