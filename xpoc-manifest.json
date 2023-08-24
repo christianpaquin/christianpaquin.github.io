@@ -1,6 +1,7 @@
 {
     "name": "Christian Paquin",
-    "url": "https://raw.githubusercontent.com/christianpaquin/void/main/xpoc",
+    "hostname": "https://christianpaquin.github.io",
+    "version": "0.1.1",
     "accounts": [
         {
             "platform": "youtube",
@@ -15,6 +16,7 @@
     ],
     "content": [
         {
+            "timestamp": "2023-07-10T00:00:00Z",
             "title": "XPOC test",
             "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
             "platform": "youtube",
@@ -23,6 +25,7 @@
             "desc": "XPOC test"
         },
         {
+	    "timestamp": "2023-08-16T19:49:00.000Z",
             "title": "Testing testing",
             "url": "https://twitter.com/xpocvalidator/status/1691899986261221531",
             "platform": "X",
