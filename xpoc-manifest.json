@@ -1,6 +1,6 @@
 {
     "name": "Christian Paquin",
-    "url": "https://christianpaquin.github.io/",
+    "url": "https://raw.githubusercontent.com/christianpaquin/void/main/xpoc",
     "accounts": [
         {
             "platform": "youtube",
@@ -9,22 +9,58 @@
         },
         {
             "platform": "x",
-            "url": "https://twitter.com/chpaquin",
-            "account": "chpaquin"
-        },
-        {
-            "platform": "github",
-            "url": "https://github.com/christianpaquin",
-            "account": "christianpaquin"
+            "url": "https://twitter.com/xpocvalidator",
+            "account": "xpocvalidator"
         }
     ],
     "content": [
-	{
-	    "title": "XPOC test", 
-	    "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
-	    "platform": "youtube",
-	    "puid": "hDd3t7y1asU",
-	    "account": "@christianpaquinmsr"
-	}	
+        {
+            "title": "XPOC test",
+            "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
+            "platform": "youtube",
+            "puid": "hDd3t7y1asU",
+            "account": "@christianpaquinmsr",
+            "desc": "XPOC test"
+        },
+        {
+            "title": "Testing testing",
+            "url": "https://twitter.com/xpocvalidator/status/1691899986261221531",
+            "platform": "X",
+            "puid": "1691899986261221531",
+            "account": "xpocvalidator",
+            "desc": "Test tweet"
+        },
+        {
+            "title": "Panel: Building for societal resilience",
+            "desc": "MSR Panel on various social resilience technologies",
+            "url": "https://www.youtube.com/watch?v=pzi76VdmD9g",
+            "platform": "youtube",
+            "puid": "pzi76VdmD9g",
+            "account": "@MicrosoftResearch"
+        },
+        {
+            "title": "Defcon 27 Migrating to quantum safe crypto presentation",
+            "desc": "DC27 presentation about quantum-safe crypto at the crypto village - Christian Paquin",
+            "url": "https://www.youtube.com/watch?v=IqCw19bKE6c",
+            "platform": "youtube",
+            "puid": "IqCw19bKE6c",
+            "account": "@DEFCONConference"
+        },
+        {
+            "title": "Shmoocon 2019 PQC presentation",
+            "desc": "Today’s defense against tomorrow’s quantum hacker - Christian Paquin",
+            "url": "https://www.youtube.com/watch?v=eelVRePPmE0",
+            "platform": "youtube",
+            "puid": "eelVRePPmE0",
+            "account": "@0xdade"
+        },
+        {
+            "title": "Defcon 26 PQC presentation",
+            "desc": "Integrating PQC in real-life applications (Crypto Village)",
+            "url": "https://www.youtube.com/watch?v=SCdaYAFx7hw",
+            "platform": "youtube",
+            "puid": "SCdaYAFx7hw",
+            "account": "@DEFCONConference"
+        }
     ]
 }
