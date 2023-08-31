@@ -4,12 +4,12 @@
     "version": "0.1.1",
     "accounts": [
         {
-            "platform": "youtube",
+            "platform": "YouTube",
             "url": "https://www.youtube.com/@christianpaquinmsr/about",
             "account": "christianpaquinmsr"
         },
         {
-            "platform": "x",
+            "platform": "X",
             "url": "https://twitter.com/chpaquin",
             "account": "chpaquin"
         }
@@ -19,9 +19,9 @@
             "timestamp": "2023-07-10T00:00:00Z",
             "title": "XPOC test",
             "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
-            "platform": "youtube",
+            "platform": "YouTube",
             "puid": "hDd3t7y1asU",
-            "account": "@christianpaquinmsr",
+            "account": "christianpaquinmsr",
             "desc": "XPOC test"
         },
         {
@@ -37,33 +37,33 @@
             "title": "Panel: Building for societal resilience",
             "desc": "MSR Panel on various social resilience technologies",
             "url": "https://www.youtube.com/watch?v=pzi76VdmD9g",
-            "platform": "youtube",
+            "platform": "YouTube",
             "puid": "pzi76VdmD9g",
-            "account": "@MicrosoftResearch"
+            "account": "MicrosoftResearch"
         },
         {
             "title": "Defcon 27 Migrating to quantum safe crypto presentation",
             "desc": "DC27 presentation about quantum-safe crypto at the crypto village - Christian Paquin",
             "url": "https://www.youtube.com/watch?v=IqCw19bKE6c",
-            "platform": "youtube",
+            "platform": "YouTube",
             "puid": "IqCw19bKE6c",
-            "account": "@DEFCONConference"
+            "account": "DEFCONConference"
         },
         {
             "title": "Shmoocon 2019 PQC presentation",
             "desc": "Today’s defense against tomorrow’s quantum hacker - Christian Paquin",
             "url": "https://www.youtube.com/watch?v=eelVRePPmE0",
-            "platform": "youtube",
+            "platform": "YouTube",
             "puid": "eelVRePPmE0",
-            "account": "@0xdade"
+            "account": "0xdade"
         },
         {
             "title": "Defcon 26 PQC presentation",
             "desc": "Integrating PQC in real-life applications (Crypto Village)",
             "url": "https://www.youtube.com/watch?v=SCdaYAFx7hw",
-            "platform": "youtube",
+            "platform": "YouTube",
             "puid": "SCdaYAFx7hw",
-            "account": "@DEFCONConference"
+            "account": "DEFCONConference"
         }
     ]
 }
