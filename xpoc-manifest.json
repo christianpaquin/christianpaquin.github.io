@@ -16,6 +16,15 @@
     ],
     "content": [
         {
+	    "timestamp": "2023-09-07T00:00:00Z",
+            "title": "XPOC technical overview",
+            "url": "https://www.youtube.com/watch?v=G9OGrOpNif8",
+            "platform": "YouTube",
+            "puid": "G9OGrOpNif8",
+            "account": "christianpaquinmsr",
+            "desc": "Short overview of the XPOC framework"
+	},
+	{
             "timestamp": "2023-07-10T00:00:00Z",
             "title": "XPOC test",
             "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
