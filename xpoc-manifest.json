@@ -17,18 +17,14 @@
 	    "platform": "GitHub",
 	    "url": "https://github.com/christianpaquin",
 	    "account": "christianpaquin"
+	},
+	{
+	    "platform": "Mastodon",
+	    "url": "https://infosec.exchange/@chpaquin",
+	    "account": "chpaquin"
 	}
     ],
     "content": [
-        {
-	    "timestamp": "2023-09-07T00:00:00Z",
-            "title": "XPOC technical overview",
-            "url": "https://www.youtube.com/watch?v=G9OGrOpNif8",
-            "platform": "YouTube",
-            "puid": "G9OGrOpNif8",
-            "account": "christianpaquinmsr",
-            "desc": "Short overview of the XPOC framework"
-	},
 	{
             "timestamp": "2023-07-10T00:00:00Z",
             "title": "XPOC test",
@@ -78,6 +74,15 @@
             "platform": "YouTube",
             "puid": "SCdaYAFx7hw",
             "account": "DEFCONConference"
-        }
+        },
+	{
+	    "timestamp": "2023-09-08T00:00:00Z",
+            "title": "Short XPOC demonstration",
+            "url": "https://www.youtube.com/watch?v=PNn_ex_J-YA",
+            "platform": "YouTube",
+            "puid": "PNn_ex_J-YA",
+            "account": "christianpaquinmsr",
+            "desc": "Short XPOC demonstration, using sample tools from our GitHub repository"
+	}
     ]
 }
