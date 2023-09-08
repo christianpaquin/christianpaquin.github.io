@@ -12,7 +12,12 @@
             "platform": "X",
             "url": "https://twitter.com/chpaquin",
             "account": "chpaquin"
-        }
+        },
+	{
+	    "platform": "GitHub",
+	    "url": "https://github.com/christianpaquin",
+	    "account": "christianpaquin"
+	}
     ],
     "content": [
         {
