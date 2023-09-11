@@ -81,3 +81,8 @@ As adoption grows, it will become more difficult to target creators who are usin
 Let us know what you think about the XPOC framework, how it could be used and improved.
 
 Onward!
+
+## Links
+* GitHub repository: [https://github.com/microsoft/xpoc-framework](https://github.com/microsoft/xpoc-framework)
+* Technical overview video: [https://www.youtube.com/watch?v=G9OGrOpNif8](https://www.youtube.com/watch?v=G9OGrOpNif8)
+* Demonstration video: [https://www.youtube.com/watch?v=PNn_ex_J-YA](https://www.youtube.com/watch?v=PNn_ex_J-YA)
