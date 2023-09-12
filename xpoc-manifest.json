@@ -22,7 +22,12 @@
 	    "platform": "Mastodon",
 	    "url": "https://infosec.exchange/@chpaquin",
 	    "account": "chpaquin"
-	}
+	},
+    {
+        "platform": "Medium",
+        "url": "https://medium.com/@chpaquin",
+        "account": "chpaquin"
+    }
     ],
     "content": [
 	{
