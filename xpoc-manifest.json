@@ -40,15 +40,6 @@
             "desc": "XPOC test"
         },
         {
-	    "timestamp": "2023-08-16T19:49:00.000Z",
-            "title": "Testing testing",
-            "url": "https://twitter.com/xpocvalidator/status/1691899986261221531",
-            "platform": "X",
-            "puid": "1691899986261221531",
-            "account": "xpocvalidator",
-            "desc": "Test tweet"
-        },
-        {
             "title": "Panel: Building for societal resilience",
             "desc": "MSR Panel on various social resilience technologies",
             "url": "https://www.youtube.com/watch?v=pzi76VdmD9g",
