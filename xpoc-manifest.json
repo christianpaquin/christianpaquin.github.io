@@ -4,90 +4,84 @@
     "version": "0.1.1",
     "accounts": [
         {
+            "account": "christianpaquinmsr",
             "platform": "YouTube",
-            "url": "https://www.youtube.com/@christianpaquinmsr/about",
-            "account": "christianpaquinmsr"
+            "url": "https://www.youtube.com/@christianpaquinmsr/about"
         },
         {
+            "account": "chpaquin",
             "platform": "X",
-            "url": "https://twitter.com/chpaquin",
-            "account": "chpaquin"
+            "url": "https://twitter.com/chpaquin"
         },
 	{
+	    "account": "christianpaquin",
 	    "platform": "GitHub",
-	    "url": "https://github.com/christianpaquin",
-	    "account": "christianpaquin"
+	    "url": "https://github.com/christianpaquin"
 	},
 	{
+	    "account": "chpaquin",
 	    "platform": "Mastodon",
-	    "url": "https://infosec.exchange/@chpaquin",
-	    "account": "chpaquin"
+	    "url": "https://infosec.exchange/@chpaquin"
 	},
-    {
-        "platform": "Medium",
-        "url": "https://medium.com/@chpaquin",
-        "account": "chpaquin"
-    }
+	{
+            "account": "chpaquin",
+            "platform": "Medium",
+            "url": "https://medium.com/@chpaquin"
+
+	}
     ],
     "content": [
 	{
-            "timestamp": "2023-07-10T00:00:00Z",
-            "title": "XPOC test",
-            "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
-            "platform": "YouTube",
-            "puid": "hDd3t7y1asU",
             "account": "christianpaquinmsr",
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=hDd3t7y1asU",
             "desc": "XPOC test"
+            "puid": "hDd3t7y1asU",
+            "timestamp": "2023-07-10T00:00:00Z"
         },
         {
-            "title": "Panel: Building for societal resilience",
-            "desc": "MSR Panel on various social resilience technologies",
+            "account": "MicrosoftResearch",
+            "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=pzi76VdmD9g",
-            "platform": "YouTube",
-            "puid": "pzi76VdmD9g",
-            "account": "MicrosoftResearch"
+            "desc": "MSR Panel on various social resilience technologies",
+            "puid": "pzi76VdmD9g"
         },
         {
-            "title": "Defcon 27 Migrating to quantum safe crypto presentation",
-            "desc": "DC27 presentation about quantum-safe crypto at the crypto village - Christian Paquin",
+            "account": "DEFCONConference",
+            "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=IqCw19bKE6c",
-            "platform": "YouTube",
-            "puid": "IqCw19bKE6c",
-            "account": "DEFCONConference"
+            "desc": "DC27 presentation about quantum-safe crypto at the crypto village",
+            "puid": "IqCw19bKE6c"
         },
         {
-            "title": "Shmoocon 2019 PQC presentation",
-            "desc": "Today’s defense against tomorrow’s quantum hacker - Christian Paquin",
+            "account": "0xdade",
+            "platform": "YouTube",
             "url": "https://www.youtube.com/watch?v=eelVRePPmE0",
-            "platform": "YouTube",
-            "puid": "eelVRePPmE0",
-            "account": "0xdade"
+            "desc": "Today’s defense against tomorrow’s quantum hacker - Christian Paquin - Shmoocon 2019 PQC presentation",
+            "puid": "eelVRePPmE0"
         },
         {
-            "title": "Defcon 26 PQC presentation",
-            "desc": "Integrating PQC in real-life applications (Crypto Village)",
-            "url": "https://www.youtube.com/watch?v=SCdaYAFx7hw",
+            "account": "DEFCONConference",
             "platform": "YouTube",
-            "puid": "SCdaYAFx7hw",
-            "account": "DEFCONConference"
+            "url": "https://www.youtube.com/watch?v=SCdaYAFx7hw",
+            "desc": "Integrating PQC in real-life applications (Crypto Village) - Defcon 26",
+            "puid": "SCdaYAFx7hw"
         },
 	{
-	    "timestamp": "2023-09-07T00:00:00Z",
-            "title": "XPOC Technical Overview",
-            "url": "https://www.youtube.com/watch?v=G9OGrOpNif8",
-            "platform": "YouTube",
-            "puid": "G9OGrOpNif8",
             "account": "christianpaquinmsr",
-            "desc": "Short overview of the XPOC framework"		
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=G9OGrOpNif8",
+            "desc": "XPOC Technical Overview",
+            "puid": "G9OGrOpNif8",
+	    "timestamp": "2023-09-07T00:00:00Z"
 	},
 	{
-	    "timestamp": "2023-09-08T00:00:00Z",
-            "title": "Short XPOC demonstration",
-            "url": "https://www.youtube.com/watch?v=PNn_ex_J-YA",
-            "platform": "YouTube",
-            "puid": "PNn_ex_J-YA",
             "account": "christianpaquinmsr",
-            "desc": "Short XPOC demonstration, using sample tools from our GitHub repository"
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/watch?v=PNn_ex_J-YA",
+            "desc": "Short XPOC demonstration",
+            "puid": "PNn_ex_J-YA",
+	    "timestamp": "2023-09-08T00:00:00Z"
 	}
     ]
 }
