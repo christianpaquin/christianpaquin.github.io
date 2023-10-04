@@ -9,7 +9,7 @@
 <body>
     <h1>XPOC Manifest CSV Converter</h1>
     <p>This page converts accounts and content data stored in comma-separated-value files (.cvs) into a XPOC manifest.</p>
-    <P>Enter the XPOC manifest owner information, select an accounts or a content file (or both), and click the generation button to create the manifest. See the <a href="accounts.csv">accounts</a> and <a href="content.csv">content</a> .cvs template files.</P>
+    <P>Enter the XPOC manifest owner information, select an accounts or a content file (or both), and click the generation button to create the manifest. See the <a href="accounts.csv">accounts</a> and <a href="content.csv">content</a>.cvs template files.</P>
     <h4>Enter XPOC owner details</h4>
     Name: <input type="text" id="nameInput" placeholder="Enter name">
     <br><br>
@@ -29,8 +29,7 @@
     <pre id="output"></pre>
 
     <!-- Include PapaParse library to parse CSV file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js" integrity="sha384-D/t0ZMqQW31H3az8ktEiNb39wyKnS82iFY52QPACM+IjKW3jDUhyIgh2PApRqJZs" crossorigin="anonymous"></script>    
     <script>
         function parseCSV(file, callback) {
             Papa.parse(file, {
