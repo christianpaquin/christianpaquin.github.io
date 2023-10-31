@@ -2,7 +2,7 @@
     "name": "Christian Paquin",
     "baseurl": "christianpaquin.github.io",
     "version": "0.3",
-    "updated": "2023-10-26T15:03:51Z",
+    "updated": "2023-10-31T17:48:34Z",
     "accounts": [
         {
             "account": "christianpaquinmsr",
@@ -100,6 +100,14 @@
             "desc": "Test XPOC Tweet",
             "puid": "1707093612029444438",
             "timestamp": "2023-09-27T18:03:00.000Z"
+        },
+        {
+            "desc": "XPOC Technical Overview",
+            "url": "https://vimeo.com/879818126",
+            "platform": "Vimeo",
+            "puid": "879818126",
+            "account": "xpoctester",
+            "timestamp": "2023-10-31T14:49:00.000Z"
         }
     ]
 }
