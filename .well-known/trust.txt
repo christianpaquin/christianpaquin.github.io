@@ -1,0 +1,10 @@
+# trust.txt file for christianpaquin.github.io
+# see https://journallist.net/reference-document-for-trust-txt-specifications
+
+belongto=https://www.microsoft.com/research/
+social=https://www.youtube.com/@christianpaquinmsr
+social=https://twitter.com/chpaquin
+social=https://x.com/chpaquin
+social=https://github.com/christianpaquin
+social=https://infosec.exchange/@chpaquin
+social=https://www.linkedin.com/in/paquinchristian/
